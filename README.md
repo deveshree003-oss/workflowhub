@@ -52,7 +52,7 @@ The server starts at **http://localhost:8081**
 
 ## 📖 Interactive API Documentation
 
-Open **http://localhost:8081/swagger-ui.html** to test endpoints directly from the browser.
+Open **http://localhost:8081/swagger-ui/index.html** to test endpoints directly from the browser.
 
 ## 📬 Sample Requests
 
