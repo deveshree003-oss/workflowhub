@@ -2,8 +2,6 @@
 
 A RESTful workflow management API built with Java and Spring Boot for managing task lifecycles with full CRUD operations, validation, persistence, and interactive API documentation.
 
-![Swagger UI](docs/swagger-screenshot.png)
-
 ## 🚀 Tech Stack
 
 - **Language:** Java 17+
@@ -38,6 +36,7 @@ A RESTful workflow management API built with Java and Spring Boot for managing t
 ## 🛠️ How to Run
 
 ### Prerequisites
+
 - Java 17 or higher
 - Maven (or use the included `mvnw` wrapper)
 
@@ -47,3 +46,52 @@ A RESTful workflow management API built with Java and Spring Boot for managing t
 git clone https://github.com/deveshree003-oss/workflowhub.git
 cd workflowhub
 ./mvnw spring-boot:run
+```
+
+The server starts at **http://localhost:8081**
+
+## 📖 Interactive API Documentation
+
+Open **http://localhost:8081/swagger-ui.html** to test endpoints directly from the browser.
+
+## 📬 Sample Requests
+
+### Create a task
+
+```bash
+curl -X POST http://localhost:8081/tasks \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Learn Spring Boot","description":"Build REST API","status":"IN_PROGRESS"}'
+```
+
+### Get all tasks
+
+```bash
+curl http://localhost:8081/tasks
+```
+
+### Delete a task
+
+```bash
+curl -X DELETE http://localhost:8081/tasks/1
+```
+
+## 🗄️ Database Console
+
+Access at **http://localhost:8081/h2-console**
+
+- JDBC URL: `jdbc:h2:file:./data/workflowhub`
+- Username: `sa`
+- Password: *(blank)*
+
+## 🧪 Testing
+
+```bash
+./mvnw test
+```
+
+## 🔮 Future Enhancements
+
+- JWT authentication
+- PostgreSQL for production
+- Docker containerization
